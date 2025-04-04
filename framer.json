@@ -4,7 +4,7 @@
   "modes": [
     "canvas"
   ],
-  "icon": "/icon.svg",
+  "icon": "/icon.png",
   "actions": {
     "generateComponent": {
       "title": "Generate Framer Code Component",
