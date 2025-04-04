@@ -4,5 +4,11 @@
   "modes": [
     "canvas"
   ],
-  "icon": "/icon.svg"
+  "icon": "/icon.svg",
+  "actions": {
+    "generateComponent": {
+      "title": "Generate Framer Code Component",
+      "path": "actions.ts"
+    }
+  }
 }

@@ -1,19 +1,68 @@
-# Framer Plugin Template
+# 🧠 AI Code Companion for Framer
 
-This is a template for using the Framer Plugin API in a TypeScript project.
+A Framer plugin that uses Deepseek AI to generate ready-to-use Framer **React Code Components** from plain English prompts.
 
-## Quickstart
+## ✨ Features
 
-First, run the development server:
+- Generate Framer code components by describing them in natural language
+- Copy generated code to clipboard instantly
+- Clean output (no markdown or noise)
+- Helpful UI with loading feedback and usage tips
+
+## 🚀 How It Works
+
+1. Type a description like:  
+   `"Create a button that rotates on hover"`
+2. Click **Generate**
+3. The AI returns a clean Framer-compatible React component
+4. Copy the code and paste it into a **Framer Code Component**
+
+## 🧱 Tech Stack
+
+- **Framer Plugin SDK v3**
+- **React + TypeScript**
+- **Deepseek Coder API**
+- **Vite** for fast local dev
+
+## 🧪 Local Development
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/your-username/code-companion.git
+   cd code-companion
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file at the root:
+   ```
+   VITE_DEEPSEEK_API_KEY=your_deepseek_api_key_here
+   ```
+
+4. Run the dev server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open Framer → Plugins → **Run Plugin Locally** → Select `code-companion`
+
+## 📦 Building
+
+To build the plugin for publishing:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run pack
 ```
 
-Learn more: https://www.framer.com/developers/plugins/introduction
+This will output a `.zip` file you can upload to Framer.
+
+## 🧠 Credits
+
+Built by [@DeveloperAdityaa](https://github.com/DeveloperAdityaa) with love for the Framer & AI community.
+
+## 📄 License
+
+MIT © 2025 Aditya Singh
