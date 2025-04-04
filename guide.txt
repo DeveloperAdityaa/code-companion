@@ -1,0 +1,67 @@
+# 📘 Code Companion Plugin - Development Guide
+
+## 🎯 What We Want to Create
+
+We are building a **Framer plugin called "Code Companion"** that enables users to:
+- Describe UI components in plain English
+- Generate fully functional Framer-compatible React Code Components using Deepseek AI
+- View and edit the generated code in a chat-like interface
+- Preview the component live
+- Copy the code into Framer projects with one click
+
+The ultimate goal is to make coding in Framer accessible to non-coders and speed up ideation for developers and designers alike.
+
+---
+
+## ✅ What We Have Implemented
+
+- ✅ Deepseek API integration for component generation
+- ✅ Input field to describe a component
+- ✅ Copy-to-clipboard functionality
+
+---
+
+## ⚠️ Current Limitations
+
+- ❌ Cannot insert code components directly into the canvas (Framer SDK v3 does not support it yet)
+- ❌ No state persistence (messages are lost on reload)
+- ❌ Live preview sandbox is limited (iframes may not support complex component rendering)
+- ❌ No error feedback from the AI if the response is invalid JSX
+- ❌ No multi-turn refinement context beyond basic chaining
+
+---
+
+## 📚 Resources We're Using
+
+- **Framer Plugin SDK v3**  
+  [https://www.framer.com/developers/plugins-introduction](https://www.framer.com/developers/plugins-introduction)
+
+- **Framer Code Component Reference**  
+  [https://www.framer.com/developers/components-introduction](https://www.framer.com/developers/components-introduction)
+
+- **Deepseek Coder API**  
+  [https://deepseek.com](https://deepseek.com) (API documentation via developer dashboard)
+
+- **UI Inspiration**  
+  Real-world chat UIs like Smartsupp, Intercom, and WhatsApp for layout ideas
+
+---
+
+## 🔮 Future Plans
+
+- 🔄 Refine code based on previous turns (true conversational context)
+- 📦 Save generated components locally or in Framer's code panel
+- 💾 LocalStorage or indexedDB to persist chat history
+- 🧠 Add AI-powered “Refactor” or “Optimize” buttons for generated code
+- 🌐 Allow importing external component libraries (Material UI, etc.)
+- 🎨 Allow visual parameter customization (props sliders, toggle visibility, etc.)
+- 🧪 Improve live preview environment to render more complex code safely
+- 🧭 Add typing animation, message timestamps, and avatars for better UX
+
+---
+
+## 👋 Contributions
+
+All suggestions, designs, and improvements are welcome! Feel free to fork, clone, and build on top of this to push Framer boundaries even further.
+
+Built with ❤️ by Aditya Singh

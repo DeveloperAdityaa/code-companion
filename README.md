@@ -28,7 +28,7 @@ A Framer plugin that uses Deepseek AI to generate ready-to-use Framer **React Co
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/code-companion.git
+   git clone https://github.com/DeveloperAdityaa/code-companion.git
    cd code-companion
    ```
 
