@@ -132,9 +132,9 @@ User: ${input}
     }
 
     return (
-        <div className="flex flex-col h-full bg-white">
-            <header className="px-6 py-5 border-b border-gray-200">
-                <h1 className="text-[32px] font-medium text-gray-900">Code Companion</h1>
+        <div className="flex flex-col h-full bg-[var(--framer-color-bg)]">
+            <header className="px-6 py-5 border-b border-[var(--framer-color-divider)]">
+                <h1 className="text-[32px] font-medium text-[var(--framer-color-text)]">Code Companion</h1>
             </header>
 
             <div className="flex-1 overflow-y-auto px-6 py-5 space-y-4">
@@ -142,55 +142,55 @@ User: ${input}
                     <div key={msg.id} className="w-full">
                         <div className={`rounded-lg p-4 ${
                             msg.type === 'user' 
-                                ? 'bg-black text-white' 
-                                : 'bg-gray-50 text-gray-900'
+                                ? 'bg-[var(--framer-color-tint)] text-[var(--framer-color-text-reversed)]' 
+                                : 'bg-[var(--framer-color-bg-secondary)] text-[var(--framer-color-text)]'
                         }`}>
                             {msg.content}
                         </div>
                         {msg.code && (
-                            <div className="mt-3 border border-gray-200 rounded-lg overflow-hidden">
-                                <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 bg-white">
+                            <div className="mt-3 border border-[var(--framer-color-divider)] rounded-lg overflow-hidden">
+                                <div className="flex items-center justify-between px-4 py-3 border-b border-[var(--framer-color-divider)] bg-[var(--framer-color-bg)]">
                                     <button 
                                         onClick={() => handleCopy(msg.code!)}
-                                        className="ml-auto px-3 py-1.5 text-sm border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50"
+                                        className="ml-auto px-3 py-1.5 text-sm border border-[var(--framer-color-divider)] rounded-lg text-[var(--framer-color-text)] hover:bg-[var(--framer-color-bg-secondary)]"
                                     >
                                         Copy code
                                     </button>
                                 </div>
-                                <div className="p-4 bg-white">
-                                    <pre className="text-sm font-mono text-gray-900 whitespace-pre-wrap leading-relaxed">
+                                <div className="p-4 bg-[var(--framer-color-bg)]">
+                                    <pre className="text-sm font-mono text-[var(--framer-color-text)] whitespace-pre-wrap leading-relaxed">
                                         {msg.code}
                                     </pre>
                                 </div>
                             </div>
                         )}
                         {msg.guide && (
-                            <div className="mt-3 border border-blue-100 rounded-lg overflow-hidden">
-                                <div className="px-4 py-3 bg-blue-50 border-b border-blue-100">
+                            <div className="mt-3 border border-[var(--framer-color-tint-dimmed)] rounded-lg overflow-hidden">
+                                <div className="px-4 py-3 bg-[var(--framer-color-tint-dimmed)] border-b border-[var(--framer-color-tint-dimmed)]">
                                     <div className="flex items-center gap-2">
-                                        <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg className="w-4 h-4 text-[var(--framer-color-tint)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                         </svg>
-                                        <span className="font-medium text-sm text-blue-900">How to use this component</span>
+                                        <span className="font-medium text-sm text-[var(--framer-color-text)]">How to use this component</span>
                                     </div>
                                 </div>
-                                <div className="p-4 bg-white">
+                                <div className="p-4 bg-[var(--framer-color-bg)]">
                                     <ol className="space-y-3">
                                         <li className="flex items-start gap-3">
-                                            <span className="flex-none flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600 text-sm font-medium">1</span>
-                                            <span className="text-sm text-gray-700">Create a new code file in your project</span>
+                                            <span className="flex-none flex items-center justify-center w-6 h-6 rounded-full bg-[var(--framer-color-tint-dimmed)] text-[var(--framer-color-tint)] text-sm font-medium">1</span>
+                                            <span className="text-sm text-[var(--framer-color-text)]">Create a new code file in your project</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <span className="flex-none flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600 text-sm font-medium">2</span>
-                                            <span className="text-sm text-gray-700">Paste this code</span>
+                                            <span className="flex-none flex items-center justify-center w-6 h-6 rounded-full bg-[var(--framer-color-tint-dimmed)] text-[var(--framer-color-tint)] text-sm font-medium">2</span>
+                                            <span className="text-sm text-[var(--framer-color-text)]">Paste this code</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <span className="flex-none flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600 text-sm font-medium">3</span>
-                                            <span className="text-sm text-gray-700">Save the file</span>
+                                            <span className="flex-none flex items-center justify-center w-6 h-6 rounded-full bg-[var(--framer-color-tint-dimmed)] text-[var(--framer-color-tint)] text-sm font-medium">3</span>
+                                            <span className="text-sm text-[var(--framer-color-text)]">Save the file</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <span className="flex-none flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-600 text-sm font-medium">4</span>
-                                            <span className="text-sm text-gray-700">The component will appear in your assets panel</span>
+                                            <span className="flex-none flex items-center justify-center w-6 h-6 rounded-full bg-[var(--framer-color-tint-dimmed)] text-[var(--framer-color-tint)] text-sm font-medium">4</span>
+                                            <span className="text-sm text-[var(--framer-color-text)]">The component will appear in your assets panel</span>
                                         </li>
                                     </ol>
                                 </div>
@@ -199,18 +199,18 @@ User: ${input}
                     </div>
                 ))}
                 {loading && (
-                    <div className="self-center px-3 py-2 text-sm text-gray-600 bg-gray-50 rounded-lg flex items-center gap-1.5">
+                    <div className="self-center px-3 py-2 text-sm text-[var(--framer-color-text-secondary)] bg-[var(--framer-color-bg-secondary)] rounded-lg flex items-center gap-1.5">
                         <span>●</span> Generating component...
                     </div>
                 )}
                 <div ref={messagesEndRef} />
             </div>
 
-            <div className="px-6 pb-6 pt-4 border-t border-gray-200">
+            <div className="px-6 pb-6 pt-4 border-t border-[var(--framer-color-divider)]">
                 <div className="space-y-3">
                     <textarea
                         ref={textareaRef}
-                        className="w-full min-h-[44px] px-4 py-3 text-sm text-gray-900 border border-gray-200 rounded-lg resize-none focus:outline-none focus:border-gray-900 placeholder:text-gray-500"
+                        className="w-full min-h-[44px] px-4 py-3 text-sm text-[var(--framer-color-text)] border border-[var(--framer-color-divider)] rounded-lg resize-none focus:outline-none focus:border-[var(--framer-color-tint)] placeholder:text-[var(--framer-color-text-tertiary)] bg-[var(--framer-color-bg-secondary)]"
                         placeholder="Type your component description..."
                         value={input}
                         onChange={handleInputChange}
@@ -218,7 +218,7 @@ User: ${input}
                         rows={1}
                     />
                     <button
-                        className="w-full px-4 py-3 text-sm font-medium text-white bg-black rounded-lg disabled:opacity-40 disabled:text-gray-500 disabled:cursor-not-allowed"
+                        className="w-full px-4 py-3 text-sm font-medium text-[var(--framer-color-text-reversed)] bg-[var(--framer-color-tint)] rounded-lg disabled:opacity-40 disabled:text-[var(--framer-color-text)] disabled:cursor-not-allowed"
                         onClick={handleSubmit}
                         disabled={loading || !input.trim()}
                     >
@@ -226,6 +226,9 @@ User: ${input}
                     </button>
                 </div>
             </div>
+<p className="text-xs text-muted-foreground my-4 mx-4 text-center text-gray-300">
+  Powered by Deepseek AI.
+</p>
         </div>
     )
 }

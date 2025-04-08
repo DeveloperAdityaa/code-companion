@@ -12,7 +12,7 @@ A Framer plugin that uses Deepseek AI to generate ready-to-use Framer **React Co
 ## 🚀 How It Works
 
 1. Type a description like:  
-   `"Create a button that rotates on hover"`
+   "Create a button that rotates on hover"
 2. Click **Generate**
 3. The AI returns a clean Framer-compatible React component
 4. Copy the code and paste it into a **Framer Code Component**
@@ -21,10 +21,14 @@ A Framer plugin that uses Deepseek AI to generate ready-to-use Framer **React Co
 
 - **Framer Plugin SDK v3**
 - **React + TypeScript**
-- **Deepseek Coder API**
+- **Deepseek Coder API** (Apache 2.0 License)
 - **Vite** for fast local dev
 
-## 🧪 Local Development
+## 🔪 Attribution
+
+This plugin uses the Deepseek AI API for code generation. Deepseek is licensed under the Apache 2.0 License. Attribution is provided here as per the license requirements. This project does not use Deepseek’s logo or imply endorsement.
+
+## 🔪 Local Development
 
 1. Clone the repo:
    ```bash
