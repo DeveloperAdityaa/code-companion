@@ -133,14 +133,10 @@ User: ${input}
 
     return (
         <div className="flex flex-col h-full bg-[var(--framer-color-bg)]">
-            <header className="px-6 py-5 border-b border-[var(--framer-color-divider)]">
-                <h1 className="text-[32px] font-medium text-[var(--framer-color-text)]">Code Companion</h1>
-            </header>
-
-            <div className="flex-1 overflow-y-auto px-6 py-5 space-y-4">
+            <div className="flex-1 overflow-y-auto px-[15px] py-3 space-y-3">
                 {messages.map((msg) => (
                     <div key={msg.id} className="w-full">
-                        <div className={`rounded-lg p-4 ${
+                        <div className={`rounded-md p-3 text-xs ${
                             msg.type === 'user' 
                                 ? 'bg-[var(--framer-color-tint)] text-[var(--framer-color-text-reversed)]' 
                                 : 'bg-[var(--framer-color-bg-secondary)] text-[var(--framer-color-text)]'
@@ -148,49 +144,41 @@ User: ${input}
                             {msg.content}
                         </div>
                         {msg.code && (
-                            <div className="mt-3 border border-[var(--framer-color-divider)] rounded-lg overflow-hidden">
-                                <div className="flex items-center justify-between px-4 py-3 border-b border-[var(--framer-color-divider)] bg-[var(--framer-color-bg)]">
-                                    <button 
-                                        onClick={() => handleCopy(msg.code!)}
-                                        className="ml-auto px-3 py-1.5 text-sm border border-[var(--framer-color-divider)] rounded-lg text-[var(--framer-color-text)] hover:bg-[var(--framer-color-bg-secondary)]"
-                                    >
-                                        Copy code
-                                    </button>
-                                </div>
-                                <div className="p-4 bg-[var(--framer-color-bg)]">
-                                    <pre className="text-sm font-mono text-[var(--framer-color-text)] whitespace-pre-wrap leading-relaxed">
+                            <div className="mt-3 border border-[var(--framer-color-divider)] rounded-md overflow-hidden">
+                                <div className="p-3 bg-[var(--framer-color-bg)]">
+                                    <pre className="text-xs font-mono text-[var(--framer-color-text)] whitespace-pre-wrap leading-relaxed">
                                         {msg.code}
                                     </pre>
                                 </div>
                             </div>
                         )}
                         {msg.guide && (
-                            <div className="mt-3 border border-[var(--framer-color-tint-dimmed)] rounded-lg overflow-hidden">
-                                <div className="px-4 py-3 bg-[var(--framer-color-tint-dimmed)] border-b border-[var(--framer-color-tint-dimmed)]">
+                            <div className="mt-3 border border-[var(--framer-color-tint-dimmed)] rounded-md overflow-hidden">
+                                <div className="px-3 py-2 bg-[var(--framer-color-tint-dimmed)] border-b border-[var(--framer-color-tint-dimmed)]">
                                     <div className="flex items-center gap-2">
-                                        <svg className="w-4 h-4 text-[var(--framer-color-tint)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg className="w-3.5 h-3.5 text-[var(--framer-color-tint)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                         </svg>
-                                        <span className="font-medium text-sm text-[var(--framer-color-text)]">How to use this component</span>
+                                        <span className="font-medium text-xs text-[var(--framer-color-text)]">How to use this component</span>
                                     </div>
                                 </div>
-                                <div className="p-4 bg-[var(--framer-color-bg)]">
-                                    <ol className="space-y-3">
-                                        <li className="flex items-start gap-3">
-                                            <span className="flex-none flex items-center justify-center w-6 h-6 rounded-full bg-[var(--framer-color-tint-dimmed)] text-[var(--framer-color-tint)] text-sm font-medium">1</span>
-                                            <span className="text-sm text-[var(--framer-color-text)]">Create a new code file in your project</span>
+                                <div className="p-3 bg-[var(--framer-color-bg)]">
+                                    <ol className="space-y-2">
+                                        <li className="flex items-start gap-2">
+                                            <span className="flex-none flex items-center justify-center w-5 h-5 rounded-full bg-[var(--framer-color-tint-dimmed)] text-[var(--framer-color-tint)] text-xs font-medium">1</span>
+                                            <span className="text-xs text-[var(--framer-color-text)]">Create a new code file in your project</span>
                                         </li>
-                                        <li className="flex items-start gap-3">
-                                            <span className="flex-none flex items-center justify-center w-6 h-6 rounded-full bg-[var(--framer-color-tint-dimmed)] text-[var(--framer-color-tint)] text-sm font-medium">2</span>
-                                            <span className="text-sm text-[var(--framer-color-text)]">Paste this code</span>
+                                        <li className="flex items-start gap-2">
+                                            <span className="flex-none flex items-center justify-center w-5 h-5 rounded-full bg-[var(--framer-color-tint-dimmed)] text-[var(--framer-color-tint)] text-xs font-medium">2</span>
+                                            <span className="text-xs text-[var(--framer-color-text)]">Paste this code</span>
                                         </li>
-                                        <li className="flex items-start gap-3">
-                                            <span className="flex-none flex items-center justify-center w-6 h-6 rounded-full bg-[var(--framer-color-tint-dimmed)] text-[var(--framer-color-tint)] text-sm font-medium">3</span>
-                                            <span className="text-sm text-[var(--framer-color-text)]">Save the file</span>
+                                        <li className="flex items-start gap-2">
+                                            <span className="flex-none flex items-center justify-center w-5 h-5 rounded-full bg-[var(--framer-color-tint-dimmed)] text-[var(--framer-color-tint)] text-xs font-medium">3</span>
+                                            <span className="text-xs text-[var(--framer-color-text)]">Save the file</span>
                                         </li>
-                                        <li className="flex items-start gap-3">
-                                            <span className="flex-none flex items-center justify-center w-6 h-6 rounded-full bg-[var(--framer-color-tint-dimmed)] text-[var(--framer-color-tint)] text-sm font-medium">4</span>
-                                            <span className="text-sm text-[var(--framer-color-text)]">The component will appear in your assets panel</span>
+                                        <li className="flex items-start gap-2">
+                                            <span className="flex-none flex items-center justify-center w-5 h-5 rounded-full bg-[var(--framer-color-tint-dimmed)] text-[var(--framer-color-tint)] text-xs font-medium">4</span>
+                                            <span className="text-xs text-[var(--framer-color-text)]">The component will appear in your assets panel</span>
                                         </li>
                                     </ol>
                                 </div>
@@ -199,36 +187,47 @@ User: ${input}
                     </div>
                 ))}
                 {loading && (
-                    <div className="self-center px-3 py-2 text-sm text-[var(--framer-color-text-secondary)] bg-[var(--framer-color-bg-secondary)] rounded-lg flex items-center gap-1.5">
+                    <div className="self-center px-3 py-1.5 text-xs text-[var(--framer-color-text-secondary)] bg-[var(--framer-color-bg-secondary)] rounded-md flex items-center gap-1.5">
                         <span>●</span> Generating component...
                     </div>
                 )}
                 <div ref={messagesEndRef} />
             </div>
 
-            <div className="px-6 pb-6 pt-4 border-t border-[var(--framer-color-divider)]">
-                <div className="space-y-3">
+            <div className="px-[15px] pb-3 pt-3 border-t border-[var(--framer-color-divider)]">
+                <div className="space-y-2">
                     <textarea
                         ref={textareaRef}
-                        className="w-full min-h-[44px] px-4 py-3 text-sm text-[var(--framer-color-text)] border border-[var(--framer-color-divider)] rounded-lg resize-none focus:outline-none focus:border-[var(--framer-color-tint)] placeholder:text-[var(--framer-color-text-tertiary)] bg-[var(--framer-color-bg-secondary)]"
+                        className="w-full min-h-[32px] px-2.5 py-1.5 text-xs text-[var(--framer-color-text)] border border-[var(--framer-color-divider)] rounded-[4px] resize-none focus:outline-none focus:border-[var(--framer-color-tint)] placeholder:text-[var(--framer-color-text-tertiary)] bg-[var(--framer-color-bg-secondary)]"
                         placeholder="Type your component description..."
                         value={input}
                         onChange={handleInputChange}
                         onKeyPress={handleKeyPress}
                         rows={1}
                     />
-                    <button
-                        className="w-full px-4 py-3 text-sm font-medium text-[var(--framer-color-text-reversed)] bg-[var(--framer-color-tint)] rounded-lg disabled:opacity-40 disabled:text-[var(--framer-color-text)] disabled:cursor-not-allowed"
-                        onClick={handleSubmit}
-                        disabled={loading || !input.trim()}
-                    >
-                        Send
-                    </button>
+                    <div className="flex flex-col gap-2">
+                        <button
+                            className="w-full h-[32px] px-3 text-xs font-medium bg-[var(--framer-color-tint)] text-[var(--framer-color-text-reversed)] rounded-[4px] hover:bg-gray-600 active:opacity-80 disabled:bg-gray-400 disabled:cursor-not-allowed transition-opacity"
+                            onClick={handleSubmit}
+                            disabled={loading || !input.trim()}
+                        >
+                            Send
+                        </button>
+                        {messages.filter(m => m.code).length > 0 && (
+                            <button
+                                onClick={() => handleCopy(messages[messages.length - 1].code!)}
+                                className="copy-button w-full h-[32px] px-3 text-xs font-medium rounded-[4px] transition-colors hover:bg-gray-600 active:opacity-80 bg-black text-white"
+                            >
+                                Copy Code
+                            </button>
+                        )}
+                    </div>
                 </div>
+                <p className="text-xs text-[var(--framer-color-text-tertiary)] mt-3 text-center">
+                    Powered by Deepseek AI
+                </p>
             </div>
-<p className="text-xs text-muted-foreground my-4 mx-4 text-center text-gray-300">
-  Powered by Deepseek AI.
-</p>
         </div>
     )
 }
+

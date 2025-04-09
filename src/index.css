@@ -3,3 +3,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities; 
+
+/* Only apply in dark mode */
+[data-framer-theme="dark"] .copy-button {
+  background-color: white;
+  color: black;
+}
+
+[data-framer-theme="dark"] .copy-button:hover {
+  color: white;
+}
+
+/* Only apply in light mode */
+[data-framer-theme="light"] .my-element {
+  color: #000;
+}
